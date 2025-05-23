@@ -4,7 +4,6 @@ import java.util.List;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
 @Entity
 public class User {
 
@@ -15,16 +14,13 @@ public class User {
 
     private String userName;
 
-    private List<User> contacts;
-
-    public User() {
+    public User() { 
     }
 
     public User(String emailId, String contactNum, String userName, List<User> contacts) {
         this.emailId = emailId;
         this.contactNum = contactNum;
         this.userName = userName;
-        this.contacts = contacts;
     }
 
     public String getContactNum() {
@@ -51,11 +47,4 @@ public class User {
         this.contactNum = contactNum;
     }
 
-    public List<User> getContacts() {
-        return contacts;
-    }
-
-    public void setContacts(List<User> contacts) {
-        this.contacts = contacts;
-    }
 }
