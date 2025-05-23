@@ -1,33 +1,50 @@
 package com.chatApp.model;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
-
 @Entity
-
 public class User {
+
     @Id
     private String emailId;
+
     private String contactNum;
+
     private String userName;
-    public User(){
-        
+
+    public User() {
     }
-    public User(String emailId,String contactNum, String userName){
-        this.emailId=emailId;
-        this.contactNum=contactNum;
-        this.userName=userName;
+
+    public User(String emailId, String contactNum, String userName, List<User> contacts) {
+        this.emailId = emailId;
+        this.contactNum = contactNum;
+        this.userName = userName;
     }
-    public String getEmail(){
-        return this.emailId;
+
+    public String getContactNum() {
+        return contactNum;
     }
-    public String getContactNum(){
-        return this.contactNum;
+
+    public String getUserName() {
+        return userName;
     }
-    public String getUserName(){
-        return this.userName;
+
+    public void setUserName(String userName) {
+        this.userName = userName;
     }
-    public void setUserName(String newUserName){
-        this.userName=newUserName;
+
+    public String getEmailId() {
+        return emailId;
     }
+
+    public void setEmailId(String emailId) {
+        this.emailId = emailId;
+    }
+
+    public void setContactNum(String contactNum) {
+        this.contactNum = contactNum;
+    }
+
 }
