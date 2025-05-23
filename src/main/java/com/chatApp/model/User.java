@@ -14,7 +14,7 @@ public class User {
 
     private String userName;
 
-    public User() { 
+    public User() {
     }
 
     public User(String emailId, String contactNum, String userName, List<User> contacts) {

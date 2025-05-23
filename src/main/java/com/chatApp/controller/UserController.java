@@ -2,7 +2,6 @@ package com.chatApp.controller;
 import java.util.*;
 
 import com.chatApp.model.*;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import com.chatApp.service.UserService;
 
@@ -12,7 +11,6 @@ public class UserController {
 
     private final UserService userService;
 
-    @Autowired
     public UserController(UserService userService) {
         this.userService = userService;
     }
